@@ -55,7 +55,7 @@ else {
                     <a href="index.php" class="mdui-ripple">首页</a>
                 </li>
                 <li class="mdui-menu-item">
-                    <a href="?em=pty" class="mdui-ripple">清空任务</a>
+                    <a href="index.php?em=pty" class="mdui-ripple">清空任务</a>
                 </li>
                 <li class="mdui-menu-item">
                     <a href="https://github.com/crillerium/todo" class="mdui-ripple">项目地址</a>
@@ -70,7 +70,7 @@ else {
                     <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
                     <div class="mdui-list-item-content">首页</div>
                 </a>
-                <a href="?em=pty" class="mdui-list-item mdui-ripple">
+                <a href="index.php?em=pty" class="mdui-list-item mdui-ripple">
                     <i class="mdui-list-item-icon mdui-icon material-icons">library_add</i>
                     <div class="mdui-list-item-content">清空任务</div>
                 </a>

@@ -1,7 +1,7 @@
 <?php
-include('header.php');
 if($_GET['em']=="pty"){
 file_put_contents("todo.txt","");
+header('location: index.php');
 }
 if(isset($_GET['do'])&&$_GET['do']!=""){
 $text = file_get_contents('todo.txt');
@@ -9,7 +9,9 @@ $strarr = explode(';',$text);
 unset($strarr[$_GET['do']]);
 $text = implode(';',$strarr);
 file_put_contents("todo.txt",$text);
+header('location: index.php');
 }
+include('header.php');
 $text = file_get_contents("todo.txt");
 $strarr = explode(';',$text);
 echo '<div class="mdui-card">
