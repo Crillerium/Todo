@@ -25,7 +25,7 @@ if(false !== strstr($strarr[$i],":::")){
 $arr = explode(':::',$strarr[$i]);
 echo '<div class="mdui-panel-item">
     <div class="mdui-panel-item-header">
-      <div class="mdui-panel-item-title">'.base64_decode($arr[0],true).'</div>
+      <div class="mdui-panel-item-title">'.nl2br(base64_decode($arr[0],true)).'</div>
       <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
     </div>
     <div class="mdui-panel-item-body">

@@ -46,8 +46,8 @@ function push()
     $myurl = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $pushurl = str_replace("wxpush.php","",$myurl);
     $data = array(
-        "touser" => 'oNrTH5l6F-O4PoCRu5fb2WWerU5s', //openid
-        "template_id" => 'EZATlS8m_9edlJw_KmzKl2poUK207Mi_eeylqEHxRfs', //模板id
+        "touser" => '', //openid
+        "template_id" => '', //模板id
         "url" => $pushurl,
         "data" => array(
             'date' => array(
@@ -93,8 +93,8 @@ function http_post_json($url, $jsonStr)
 //获取access_token
 function access_token()
 {
-    $appId = 'wx66aac0c8ae53741c';
-    $appSecret = '45040afa6b9c36af3629bbdc0b464e1b';
+    $appId = '';
+    $appSecret = '';
     $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" . $appId . "&secret=" . $appSecret;
     $ch = curl_init(); //初始化curl
     curl_setopt($ch, CURLOPT_URL, $url); //要访问的地址
@@ -114,7 +114,7 @@ function access_token()
     }
 }
 $type = file_get_contents('.cache');
-if($type='checked'){
+if($type=='checked'){
     echo push();
 }
 else{
