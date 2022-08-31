@@ -47,7 +47,7 @@ function push()
 $pushurl = str_replace("wxpush.php","",$myurl);
     $data = array(
         "touser" => 'oNrTH5l6F-O4PoCRu5fb2WWerU5s', //openid
-        "template_id" => 'pDkfV6yMYQ85lgK8qcpCrX96cxSeS0nuF_MtXBuDr2g', //模板id
+        "template_id" => 'EZATlS8m_9edlJw_KmzKl2poUK207Mi_eeylqEHxRfs', //模板id
         "url" => $pushurl,
         "data" => array(
             'date' => array(
@@ -113,4 +113,10 @@ function access_token()
         return 400;
     }
 }
-echo push();
+$type = file_get_contents('.cache');
+if($type='checked'){
+    echo push();
+}
+else{
+    echo '微信推送功能未开启,请检查后重试';
+}
